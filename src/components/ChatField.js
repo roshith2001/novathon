@@ -10,7 +10,7 @@ const ChatField = ( { message } ) => {
 
     return(
         <>
-            <div className='mb-12'>
+            <div className='my-14'>
                 {message.map((message) => (
                     <ChatBubble key={message.id} message={message}/>
                 ))}

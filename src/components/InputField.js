@@ -32,7 +32,7 @@ const InputField = ({scroll}) => {
 
     return(
         <div className='p-2 fixed bottom-0 flex justify-between items-center 
-            w-full sm:w-2/3'>
+            w-screen sm:w-2/3'>
             <div className=''>
                 <IconButton sx={{padding: 1, background: '#A288E3'}}>
                     <CameraAltIcon 
@@ -44,12 +44,12 @@ const InputField = ({scroll}) => {
             <div className=' flex-grow mx-4 bg-secondary
                 rounded-xl px-2 flex'>
                 <input type='text' 
-                    className='outline-none bg-secondary flex-grow'
-                    placeholder='Type your message here...'
+                    className='outline-none w-0 bg-secondary flex-grow'
+                    placeholder='Type here...'
                     value={message}
                     onChange={(e) => {setMessage(e.target.value)}}
                 />
-                <div>
+                <div className='flex'>
                 <IconButton>
                     <AttachFileIcon />
                 </IconButton>
