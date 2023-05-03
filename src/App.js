@@ -6,7 +6,7 @@ import { auth } from "./firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { GoogleAuthProvider, signInWithRedirect } from "firebase/auth";
 import { query, collection, orderBy,
-  onSnapshot, limit, QuerySnapshot } from 'firebase/firestore';
+  onSnapshot, limit } from 'firebase/firestore';
 import { db } from './firebase';
 
 
