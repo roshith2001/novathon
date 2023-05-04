@@ -27,7 +27,7 @@ const NavBar = (props) => {
         <div className='bg-primary items-center flex w-full sm:w-2/3 fixed top-0 justify-between py-3 p-2 shadow-lg'>
             <div className='w-5/6'>
                 <div className='px-2 text-third'>
-                    <h3 className='font-heading font-medium text-xl'>Chat Aj kal</h3>
+                    <h3 className='font-heading font-medium text-xl'>Roshith's Chat Room</h3>
                 </div>
             </div>
             <div className=''>
