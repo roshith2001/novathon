@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import { auth, db, storage } from '../firebase';
 import { addDoc, collection, serverTimestamp } from 'firebase/firestore';
-import { getDownloadURL, getStorage, ref, uploadBytes } from 'firebase/storage'
+import { getDownloadURL, ref, uploadBytes } from 'firebase/storage'
 
 import { IconButton } from '@mui/material';
 import SendIcon from '@mui/icons-material/Send';
