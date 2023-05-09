@@ -48,6 +48,7 @@ const InputField = ({scroll}) => {
             uid,
             file: downloadURL,
         });
+        scroll.current.scrollIntoView({behavior: "smooth"});
     };
 
     return(
