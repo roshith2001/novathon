@@ -26,7 +26,7 @@ const ChatBubble = ( { message } ) => {
                             <a href={message.file} target="blank">
                                 <img src={message.file} 
                                     alt='Uploaded' 
-                                    className='mx-2 w-full'/>
+                                    className='mx-2 h-56'/>
                             </a> : 
                             <p className='mx-2'>{message.text}</p>}
                     </div>
