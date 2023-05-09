@@ -62,10 +62,15 @@ function App() {
         signIn={handleSignIn}
         signOut={handleSignOut}
         />
-      {user ? <div>
-        <ChatField className="flex-grow" message={messages}/>
-        <span ref={ scroll }></span>
-        <InputField scroll={scroll}/>
+      {user ? <div className='flex flex-col flex-grow overflow-auto'>
+        <div className='flex-grow overflow-auto'>
+          <ChatField message={messages}/>
+          <span ref={ scroll }></span>
+        </div>
+        
+        <div className='flex-shrink'>
+          <InputField scroll={scroll}/>
+        </div>
         </div>
         :
         <SignInScreen signIn={handleSignIn}/>}

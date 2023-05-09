@@ -24,7 +24,7 @@ const NavBar = (props) => {
     
 
     return(
-        <div className='bg-primary items-center flex w-full sm:w-2/3 fixed top-0 justify-between py-3 p-2 shadow-lg'>
+        <div className='bg-primary items-center flex w-full sticky top-0 justify-between py-3 p-2 shadow-lg'>
             <div className='w-5/6'>
                 <div className='px-2 text-third'>
                     <h3 className='font-heading font-medium text-xl'>Roshith's Chat Room</h3>
@@ -45,7 +45,6 @@ const NavBar = (props) => {
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
                >
-                <MenuItem onClick={handleClose}>Profile</MenuItem>
                 {props.userState?
                 <MenuItem onClick={handleSignIn}>Sign Out</MenuItem>
                 :

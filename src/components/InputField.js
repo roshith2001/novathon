@@ -31,8 +31,8 @@ const InputField = ({scroll}) => {
     };
 
     return(
-        <div className='p-2 fixed bottom-0 flex justify-between items-center 
-            w-screen sm:w-2/3'>
+        <div className='p-2 flex justify-between items-center 
+            w-full'>
             <div className=''>
                 <IconButton sx={{padding: 1, background: '#A288E3'}}>
                     <CameraAltIcon 
