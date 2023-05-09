@@ -16,11 +16,19 @@ const ChatBubble = ( { message } ) => {
                     className={`flex flex-col ${isUser ? 'bg-third' : 'bg-primary'} p-2 text-secondary
                     w-4/6 rounded-xl break-all`}  
                 >
-                    <div className={`font-black ${isUser ? 'text-primary' : 'text-third'}`}>{message.name}</div>
+                    <div className={`font-black ${isUser ? 'text-primary' : 'text-third'}`}>
+                        {message.name}
+                    </div>
                     <div className='flex items-center overflow-hidden'>
                         <img src={message.avatar} alt={message.name} 
                         className='w-8 rounded-xl'/>
-                        <p className='mx-2'>{message.text}</p>
+                        {message.file ? 
+                            <a href={message.file} target="blank">
+                                <img src={message.file} 
+                                    alt='Uploaded' 
+                                    className='mx-2'/>
+                            </a> : 
+                            <p className='mx-2'>{message.text}</p>}
                     </div>
                 </div>
             </div>
