@@ -20,7 +20,7 @@ const ChatBubble = ( { message } ) => {
                     <div className='flex items-center overflow-hidden'>
                         <img src={message.avatar} alt={message.name} 
                         className='w-8 rounded-xl'/>
-                        <p className='mx-2 '>{message.text}</p>
+                        <p className='mx-2 hyphens-auto'>{message.text}</p>
                     </div>
                 </div>
             </div>
