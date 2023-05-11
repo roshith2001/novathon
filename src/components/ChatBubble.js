@@ -14,7 +14,7 @@ const ChatBubble = ( { message } ) => {
         <div className={`w-full my-4 flex ${isUser ? 'justify-end' : 'justify-start'} items-center`}>
                 <div 
                     className={`flex flex-col ${isUser ? 'bg-third' : 'bg-primary'} p-2 text-secondary
-                    w-4/6 rounded-xl break-all`}  
+                    w-4/6 rounded-xl break-normal hyphens-auto`}  
                 >
                     <div className={`font-black ${isUser ? 'text-primary' : 'text-third'}`}>
                         {message.name}
