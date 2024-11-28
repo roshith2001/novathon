@@ -10,9 +10,7 @@ const ChatField = ({ message }) => {
 
   return (
     <div>
-      {message.map((message) => (
         <ChatBubble key={message.id} message={message} />
-      ))}
       <div ref={chatBottomRef} />
     </div>
   );

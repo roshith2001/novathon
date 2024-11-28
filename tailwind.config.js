@@ -5,13 +5,20 @@ module.exports = {
     fontFamily: {
       'heading': ['Ubuntu', 'sans-serif'],
     },
-    colors: {
-      'primary': '#A288E3',
-      'secondary': '#D9D9D9',
-      'third': '#02182B',
-      'secondary2': '#E2E2E2',
-    },
     extend: {
+      gradientColorStops: {
+        'custom-start': '#FF0000', // Start color
+        'custom-end': '#0000FF',  // End color
+      },
+      colors: {
+        'primary': '#89C0E9',
+        'secondary': '#217AB4',
+        'third': '#02182B',
+        'secondary2': '#E2E2E2',
+        'border-grey': '#D4D7E3',
+        'box-grey': '#F7FBFF',
+        'deep-secondary': '#3E6D8C'
+      },
     },
   },
   plugins: [],

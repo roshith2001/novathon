@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
-import { auth, db, storage } from '../firebase';
-import { addDoc, collection, serverTimestamp } from 'firebase/firestore';
-import { getDownloadURL, ref, uploadBytes } from 'firebase/storage'
+// import { auth, db, storage } from '../firebase';
+// import { addDoc, collection, serverTimestamp } from 'firebase/firestore';
+// import { getDownloadURL, ref, uploadBytes } from 'firebase/storage'
 
 import { IconButton } from '@mui/material';
 import SendIcon from '@mui/icons-material/Send';
@@ -11,45 +11,45 @@ import KeyboardVoiceIcon from '@mui/icons-material/KeyboardVoice';
 
 const InputField = ({scroll}) => {
 
-    const messageRef = collection(db, "messages");
+    // const messageRef = collection(db, "messages");
     const[message, setMessage] = useState("");
-    const { uid, displayName, photoURL } = auth.currentUser;
+    // const { uid, displayName, photoURL } = auth.currentUser;
 
-    const sendMessage = async(event) => {
-        event.preventDefault();
-        if(message.trim() === ""){
-            return;
-        }
+    // const sendMessage = async(event) => {
+    //     event.preventDefault();
+    //     if(message.trim() === ""){
+    //         return;
+    //     }
         
-        await addDoc(collection(db,"messages"), {
-            text: message,
-            name: displayName,
-            avatar: photoURL,
-            createdAt: serverTimestamp(),
-            uid,
-        });
-        setMessage("");
-        scroll.current.scrollIntoView({behavior: "smooth"});
-    };
+    //     await addDoc(collection(db,"messages"), {
+    //         text: message,
+    //         name: displayName,
+    //         avatar: photoURL,
+    //         createdAt: serverTimestamp(),
+    //         uid,
+    //     });
+    //     setMessage("");
+    //     scroll.current.scrollIntoView({behavior: "smooth"});
+    // };
 
-    const handleFileUpload = async (event) => {
-        const file = event.target.files[0];
+    // const handleFileUpload = async (event) => {
+    //     const file = event.target.files[0];
 
-        const fileRef = ref(storage, `${new Date().toISOString()}-${file.name}`);
-        const uploadTask = uploadBytes(fileRef, file);
+    //     const fileRef = ref(storage, `${new Date().toISOString()}-${file.name}`);
+    //     const uploadTask = uploadBytes(fileRef, file);
 
-        await uploadTask;
-        const downloadURL = await getDownloadURL(fileRef);
+    //     await uploadTask;
+    //     const downloadURL = await getDownloadURL(fileRef);
 
-        await addDoc(messageRef, {
-            name: displayName,
-            avatar: photoURL,
-            createdAt: serverTimestamp(),
-            uid,
-            file: downloadURL,
-        });
-        scroll.current.scrollIntoView({behavior: "smooth"});
-    };
+    //     await addDoc(messageRef, {
+    //         name: displayName,
+    //         avatar: photoURL,
+    //         createdAt: serverTimestamp(),
+    //         uid,
+    //         file: downloadURL,
+    //     });
+    //     scroll.current.scrollIntoView({behavior: "smooth"});
+    // };
 
     return(
         <div className='p-2 flex justify-between items-center 
@@ -61,11 +61,11 @@ const InputField = ({scroll}) => {
                     </IconButton>
                 </label>
                 <input id="file-input" type="file" multiple={true} 
-                    className='hidden' onChange={ handleFileUpload }/>
+                    className='hidden' onChange={ null }/>
 
             </div>
             <form className='flex w-full'
-                onSubmit={(event) => {sendMessage(event)}}>
+                onSubmit={null}>
             <div className=' flex-grow mx-4 bg-secondary
                 rounded-xl px-2 flex'>
                 <input type='text' 
