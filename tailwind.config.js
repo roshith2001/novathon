@@ -19,6 +19,9 @@ module.exports = {
         'box-grey': '#F7FBFF',
         'deep-secondary': '#3E6D8C'
       },
+      boxShadow: {
+        'white': '0 0 5px rgba(120, 120, 120, 0.2)',  // Custom white shadow
+      }
     },
   },
   plugins: [],

@@ -6,82 +6,39 @@ import React, { useState } from 'react';
 
 import { IconButton } from '@mui/material';
 import SendIcon from '@mui/icons-material/Send';
-import AttachFileIcon from '@mui/icons-material/AttachFile';
-import KeyboardVoiceIcon from '@mui/icons-material/KeyboardVoice';
 
-const InputField = ({scroll}) => {
+const InputField = ({scroll, sendMessage}) => {
 
-    // const messageRef = collection(db, "messages");
+    
     const[message, setMessage] = useState("");
-    // const { uid, displayName, photoURL } = auth.currentUser;
-
-    // const sendMessage = async(event) => {
-    //     event.preventDefault();
-    //     if(message.trim() === ""){
-    //         return;
-    //     }
-        
-    //     await addDoc(collection(db,"messages"), {
-    //         text: message,
-    //         name: displayName,
-    //         avatar: photoURL,
-    //         createdAt: serverTimestamp(),
-    //         uid,
-    //     });
-    //     setMessage("");
-    //     scroll.current.scrollIntoView({behavior: "smooth"});
-    // };
-
-    // const handleFileUpload = async (event) => {
-    //     const file = event.target.files[0];
-
-    //     const fileRef = ref(storage, `${new Date().toISOString()}-${file.name}`);
-    //     const uploadTask = uploadBytes(fileRef, file);
-
-    //     await uploadTask;
-    //     const downloadURL = await getDownloadURL(fileRef);
-
-    //     await addDoc(messageRef, {
-    //         name: displayName,
-    //         avatar: photoURL,
-    //         createdAt: serverTimestamp(),
-    //         uid,
-    //         file: downloadURL,
-    //     });
-    //     scroll.current.scrollIntoView({behavior: "smooth"});
-    // };
+    
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (message.trim() === "") return;
+        // Send message to the parent component
+        sendMessage(message);
+        // Clear the input field
+        setMessage("");
+    };
 
     return(
         <div className='p-2 flex justify-between items-center 
             w-full'>
-            <div className=''>
-                <label htmlFor="file-input">
-                    <IconButton component="span" sx={{padding: 1, background: '#A288E3'}}>
-                        <AttachFileIcon sx={{color: '#02182B'}} />
-                    </IconButton>
-                </label>
-                <input id="file-input" type="file" multiple={true} 
-                    className='hidden' onChange={ null }/>
-
-            </div>
+            
             <form className='flex w-full'
-                onSubmit={null}>
-            <div className=' flex-grow mx-4 bg-secondary
+                onSubmit={handleSubmit}>
+            <div className=' flex-grow mx-4 bg-box-grey border border-border-grey
                 rounded-xl px-2 flex'>
                 <input type='text' 
-                    className='outline-none w-0 bg-secondary flex-grow'
+                    className=' bg-box-grey rounded-lg p-2 outline-none flex-grow'
                     placeholder='Type here...'
                     value={message}
                     onChange={(e) => {setMessage(e.target.value)}}
                 />
-                <div className='flex'>
-                <IconButton>
-                    <KeyboardVoiceIcon />
-                </IconButton>
-                </div> 
+                
             </div>
             <div className=''>
-                <IconButton type='submit' sx={{padding: 1, background: '#A288E3'}}>
+                <IconButton type='submit' sx={{padding: 1, background: '#D4D7E3'}}>
                     <SendIcon 
                         sx={{color: '#02182B'}} />
                 </IconButton>

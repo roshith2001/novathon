@@ -13,8 +13,6 @@ const ChatBubble = ( { message } ) => {
                         {message.name}
                     </div>
                     <div className='flex items-center overflow-hidden'>
-                        <img src={null} alt={message.name} 
-                        className='w-8 rounded-xl'/>
                         {message.file ? 
                             <a href={message.file} target="blank">
                                 <img src={message.file} 

@@ -19,7 +19,7 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 
 
-import NavBar from './components/NavBar';
+import ChatComponent from './components/ChatComponent';
 
 function App() {
   
@@ -29,6 +29,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/chat" element={<ChatComponent />} />
         </Routes>
       </BrowserRouter>
     </div>
