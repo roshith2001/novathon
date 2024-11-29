@@ -24,11 +24,12 @@ function Home(){
                 <form onSubmit={handleSubmit}>
                     <label forHtml="username" className="inline-block pb-2 text-xs">Username</label>
                     <input 
-                        type="text" 
+                        type="email" 
                         name="username" 
                         className="border border-border-grey bg-box-grey rounded-lg p-2 w-full focus:outline-none focus:border-none focus:ring-1 focus:ring-secondary"
                         placeholder="example@mail.com"
                         onChange={(e) => setUserName(e.target.value)}
+                        required
                     />
                     <label forHtml="password" className="inline-block pt-4 pb-2 text-xs">Password</label>
                     <input 
@@ -37,6 +38,7 @@ function Home(){
                         className="border border-border-grey bg-box-grey rounded-lg p-2 w-full focus:outline-none focus:border-none focus:ring-1 focus:ring-secondary"
                         placeholder="Atleast 6 Characters"
                         onChange={(e) => setPassword(e.target.value)}
+                        required
                     />
                     <div>
                         <input type="submit" value="Login" 

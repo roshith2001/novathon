@@ -1,20 +1,19 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 
 const NavBar = (props) => {
     const [loading, setLoading] = useState(false); // Loading state to manage the button during request
     const [extractedData, setExtractedData] = useState(null); // State to store the extracted data
-
+    const PUBLIC_URL = 'https://grand-mackerel-urgently.ngrok-free.app'
     const handleButtonClick = async () => {
         setLoading(true); // Set loading state to true when the request is initiated
 
         try {
             // Call the GET /extract_data/ endpoint
-            const response = await fetch('https://grand-mackerel-urgently.ngrok-free.app/extract_data', {
-                method: 'GET',
+            const response = await axios.get(`${PUBLIC_URL}/extract_data`, {
                 headers: {
-                    'ngrok-skip-browser-warning': '69420', // Custom header
-                    'Content-Type': 'application/json', // Optional: Content-Type if needed
-                },
+                    "ngrok-skip-browser-warning": "69420"
+                }
             });
             
             // If the response is successful
@@ -50,11 +49,6 @@ const NavBar = (props) => {
                     {extractedData && (
                         <div className="mt-4">
                             <h4 className="font-medium text-lg">Extracted Data</h4>
-                            <ul>
-                                <li><strong>Date:</strong> {extractedData[0]?.join(', ')}</li>
-                                <li><strong>Place:</strong> {extractedData[1]?.join(', ')}</li>
-                                <li><strong>Name:</strong> {extractedData[2]?.join(', ')}</li>
-                            </ul>
                         </div>
                     )}
                 </div>

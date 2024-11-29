@@ -1,6 +1,5 @@
 import './App.css';
 import React from 'react';
-import { useState, useEffect, useRef } from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from './components/Home';
 import Signup from './components/Signup';
@@ -27,7 +26,7 @@ function App() {
     <div className='flex flex-col relative mx-auto h-screen font-heading'>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Home />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/chat" element={<ChatComponent />} />
         </Routes>
