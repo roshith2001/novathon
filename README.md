@@ -4,6 +4,7 @@ GoTo [Chat Page](https://novathon.vercel.app/chat)
 
 # Backend and Models
 GoTo [Backend-Kaggle Notebook](https://www.kaggle.com/code/roshithkrishnap/llmware)
+GoTo [Backend git](https://github.com/roshith2001/novothon-backend.git)
 
 # As this is hosted on Kaggle Notebook as a server the avilabilityy of the server is not guranteed. 
 
