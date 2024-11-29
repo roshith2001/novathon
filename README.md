@@ -1,3 +1,12 @@
+# This is the repo of Login and Chat Screen
+GoTo [Login Page](https://novathon.vercel.app/login)
+GoTo [Chat Page](https://novathon.vercel.app/chat)
+
+# Backend and Models
+GoTo [Backend-Kaggle Notebook](https://www.kaggle.com/code/roshithkrishnap/llmware)
+
+# As this is hosted on Kaggle Notebook as a server the avilabilityy of the server is not guranteed. 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
