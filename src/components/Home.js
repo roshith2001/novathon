@@ -28,6 +28,7 @@ function Home(){
                         name="username" 
                         className="border border-border-grey bg-box-grey rounded-lg p-2 w-full focus:outline-none focus:border-none focus:ring-1 focus:ring-secondary"
                         placeholder="example@mail.com"
+                        value={username}
                         onChange={(e) => setUserName(e.target.value)}
                         required
                     />
@@ -35,6 +36,7 @@ function Home(){
                     <input 
                         type="password" 
                         name="password" 
+                        value={password}
                         className="border border-border-grey bg-box-grey rounded-lg p-2 w-full focus:outline-none focus:border-none focus:ring-1 focus:ring-secondary"
                         placeholder="Atleast 6 Characters"
                         onChange={(e) => setPassword(e.target.value)}

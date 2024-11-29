@@ -6,7 +6,7 @@ import axios from 'axios';
 
 const ChatComponent = () => {
     const [messages, setMessages] = useState([
-        { id: '1', name: 'Mimiona', text: 'Buddy' },
+        { id: '1', name: 'Mimiona', text: 'I am sure you will be better!' },
     ]);
     const PUBLIC_URL = 'https://grand-mackerel-urgently.ngrok-free.app'
     useEffect(() => {
@@ -87,7 +87,7 @@ const ChatComponent = () => {
             setMessages((prevMessages) => [...prevMessages, errorMessage]);
         }
     };
-    
+
     console.log(messages)
     return (
         <div className="flex w-full h-screen bg-cover bg-center px-6" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1641895964758-3e4374714a8c?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8c3RhcnJ5JTIwbmlnaHQlMjBza3l8ZW58MHx8MHx8fDA%3D')" }}>
